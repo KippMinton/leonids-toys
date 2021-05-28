@@ -38,10 +38,10 @@ const chopper = {
 
 const crayons = {
    id: 5,
-   name: "Crayons",
+   name: "Boxed Crayons, 24Ct.",
    type: "art supplies",
    maker: "Crayola",
-   price: 14.99
+   price: 1.79
 }
 
 toys.push(chopper)
@@ -56,4 +56,31 @@ for (const toy of toys) {
       toy.price = toy.price * 1.05;
       console.log(`The ${toy.name} ${toy.type} produced by ${toy.maker} can be purchased for $${toy.price}.`)
    }
+}
+
+
+
+const addToyToInventory = (toyObj) => {
+    const lastIndex = toys.length - 1
+    const currentLastToy = toys[lastIndex]
+    const maxId = currentLastToy.id
+    const idForNewToy= maxId + 1
+
+    toyObj.id = idForNewToy
+    toys.push(toyObj)
+}
+
+const catan = {
+   name: "CATAN",
+   type: "board game",
+   maker: "CATAN GmbH",
+   price: 55.00
+}
+
+addToyToInventory(catan)
+
+console.log(toys)
+
+for (const toy of toys) {
+   console.log(`The ${toy.name} ${toy.type} made by ${toy.maker} costs $${toy.price}.`)
 }
