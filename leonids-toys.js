@@ -84,3 +84,17 @@ console.log(toys)
 for (const toy of toys) {
    console.log(`The ${toy.name} ${toy.type} made by ${toy.maker} costs $${toy.price}.`)
 }
+
+const removeProduct = (id) => {
+   let toyIndex = 0;
+   for (let i = 0; i < toys.length; i++) {
+      if (toys[i].id === id) {
+         toyIndex = i;
+      }
+   }
+   toys.splice(toyIndex, 1)  
+   return toys
+}
+
+
+console.log(removeProduct(3))
