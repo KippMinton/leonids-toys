@@ -98,3 +98,30 @@ const removeProduct = (id) => {
 
 
 console.log(removeProduct(3))
+
+const currentInventory = [
+    "Muscle Man",
+    "Dora the Scientist",
+    "Princess Sparkles",
+    "Perry Scope",
+    "Explorer Backpack",
+    "Space Scout Suit",
+    "Geology Mineral Dig Kit",
+    "Perry Scope"
+]
+
+const sellPerryScope = () => {
+
+   for (const toy of currentInventory) {
+      let availableForPurchase = false
+      
+      if (toy === "Perry Scope") {
+         availableForPurchase = true
+         }
+      if (availableForPurchase) {
+         console.log("Enjoy your new Perry Scope")
+      }
+   }
+}
+
+sellPerryScope()
